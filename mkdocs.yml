@@ -1,0 +1,48 @@
+site_name: Manual JrDeep — VSCode + IA Ultimate (2025–2026)
+site_description: Guia definitivo do setup de VSCode + GPT + Claude + Codex criado para Junior Deep.
+site_author: Junior Deep
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: pink
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.tracking
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+    - content.code.annotate
+    - toc.integrate
+
+nav:
+  - Home: index.md
+  - Capa: 00-capa.md
+  - Apresentação: 01-apresentacao.md
+  - Arquitetura dos Perfis: 02-arquitetura-perfis.md
+  - Modelos de IA: 03-modelos-ia.md
+  - Perfil Air (Sequoia): 04-perfil-air.md
+  - Perfil Mini (Monterey): 05-perfil-mini.md
+  - Workflow Inteligente: 06-workflow-inteligente.md
+  - Agent Mode: 07-agent-mode.md
+  - Inline Codex: 08-inline-codex.md
+  - Edit / Plan: 09-plan-edit.md
+  - Terminal Integrado: 10-integracao-terminal.md
+  - Recuperação Total: 11-recuperacao.md
+  - GPT vs Claude: 12-gpt-vs-claude.md
+  - Workflow JrDeep: 13-workflow-jrdeep.md
+  - As 3 Zonas do VSCode: 14-tres-zonas.md
+  - Checklist de Modelos: 15-checklist.md
+  - Fluxo Visual: 16-fluxo-visual.md
