@@ -1,0 +1,238 @@
+# 🎯 **SUMÁRIO TÉCNICO COMPLETO DO PROJETO**
+
+### **Manual JrDeep — VSCode + IA Ultimate Setup (2025–2026)**
+
+*(Use isto como documentação oficial para você e para qualquer IA.)*
+
+---
+
+# 📌 **1. OBJETIVO GERAL DO PROJETO**
+
+Construir o **manual definitivo**, totalmente documentado, sobre como configurar e operar o ambiente JrDeep:
+
+### **"VSCode + IA Ultimate Setup"**
+
+Integrando:
+
+* GitHub Copilot (GPT-5.1 Preview + Codex)
+* Claude 3.5 / 4.5 Sonnet / Haiku
+* Todos os modos (Chat, Agent Mode, Inline)
+* Perfis dedicados (macOS Air e Mini)
+* Arquiteturas de settings.json isoladas
+* mkdocs + GitHub Pages para publicação do manual
+* Workflow inteligente para produtividade máxima
+* Métodos de recuperação total e reset
+* Fluxos de decisão e mapas visuais
+
+O resultado final é um **site profissional do manual**, hospedado em GitHub Pages.
+
+> **Status: PUBLICADO e funcionando:**
+> [https://deepdevpro.github.io/jrdeep-ultimate-vscode-ai-setup/](https://deepdevpro.github.io/jrdeep-ultimate-vscode-ai-setup/)
+
+---
+
+# 📌 **2. TECNOLOGIAS DESTE PROJETO**
+
+### **Backend da documentação**
+
+* **mkdocs-material**
+* `mkdocs.yml` customizado
+* GitHub Pages (branch `gh-pages`)
+
+### **IDE**
+
+* VSCode (macOS)
+* Git + GitHub (SSH)
+* Perfis independentes do VSCode
+
+### **Inteligências Artificiais**
+
+* GPT-5.1 (Preview)
+* Claude 4.1, 4.5, 3.5 Sonnet
+* Codex (Preview + Codex-mini)
+* GitHub Copilot Agent Mode
+* Inline Completions Engine
+* Ferramentas: Terminal, Editor, File System
+
+### **Máquinas utilizadas**
+
+* **MacBook Air (Intel): perfil AIR**
+* **Mac Mini 2014 Monterey: perfil MINI**
+
+---
+
+# 📌 **3. O QUE FOI FEITO (STATUS ATUAL)**
+
+### ✔ **3.1 Configuração dos perfis VSCode:**
+
+* JuniorDeep-Air
+* JuniorDeep-Mini
+* JuniorDeep-Agent
+* Perfis funcionando com modelos específicos
+* settings.json refinado e automatizado
+
+### ✔ **3.2 IA totalmente integrada**
+
+* GPT rodando em Agent Mode
+* Claude rodando em Agent Mode
+* Inline funcionando com GPT-5.1 Codex
+* Terminal integrado com IA (comandos executados real)
+
+### ✔ **3.3 Estrutura do manual (mkdocs)**
+
+A nova estrutura enviada (imagem) está **PERFEITA**:
+
+```
+docs/
+  00-capa.md
+  00-indice.md
+  01-apresentacao.md
+  01-filosofia.md
+  02-arquitetura-vscode-ia.md
+  03-sistemas-air-mini-agent.md
+  04-config-setting-json.md
+  05-inline-chat-agent.md
+  06-modelos.md
+  07-config-completa-airvsmini.md
+  08-disaster-recovery.md
+  09-profiles-reset.md
+  10-migrar.md
+  11-recuperacao.md
+  12-gpt-vs-claude.md
+  13-workflow.md
+  14-tres-zonas.md
+  15-sistema-definitivo.md
+  16-fluxo-decisao.md
+  17-fluxo-visual.md
+  18-versao-vertical.md
+  19-versao-quadro-branco.md
+index.md
+```
+
+### ✔ **3.4 Publicação completa**
+
+* GitHub repo criado
+* Push via SSH configurado
+* GitHub Pages publicado
+* mkdocs funcionando
+
+---
+
+# 📌 **4. O QUE AINDA FALTA FAZER**
+
+### 🔜 **4.1 Preencher capítulos longos com conteúdo final**
+
+Alguns capítulos já foram preenchidos (primeira versão longa), outros ainda precisam ser migrados ou revisados.
+
+O novo chat servirá para:
+
+#### - Revisar e padronizar TODOS os arquivos `.md`
+
+#### - Expandir capítulos resumidos
+
+#### - Inserir diagramas ASCII nos arquivos corretos
+
+#### - Criar versões Mobile (vertical)
+
+#### - Criar a versão quadro-branco (arquitetura)
+
+#### - Ajustar indexação no mkdocs
+
+#### - Criar capa final do manual
+
+#### - Gerar versão PDF final
+
+---
+
+# 📌 **5. ARQUITETURA DO PROJETO (mkdocs)**
+
+### **mkdocs.yml** (já criado)
+
+* com navegação automática
+* usando tema Material
+* breadcrumb
+* search
+* light/dark mode
+* deploy automático via `gh-deploy`
+
+### **docs/**
+
+Contém 100% do conteúdo do manual.
+
+Cada capítulo está numerado para garantir ordem no mkdocs.
+
+---
+
+# 📌 **6. SISTEMA DE PERFIS VSCode (AIR / MINI / AGENT)**
+
+### PERFIL AIR
+
+* GPT-5.1 Preview como default
+* Claude Sonnet habilitado
+* Inline com GPT-5.1 Codex
+* Agente total
+* Execução no terminal ativada
+
+### PERFIL MINI
+
+* Ideal para máquina lenta
+* GPT-5.1 Codex Mini como inline
+* GPT-5.1 Preview como agente
+* Claude Haiku como fallback
+* otimizações no auto-complete
+* desativação de extensões pesadas
+
+### PERFIL AGENT
+
+* Perfil universal focado apenas em comando no VSCode
+* usado para testes de automação
+* habilita execução terminal total
+* usado como base técnica
+
+---
+
+# 📌 **7. SETTINGS.JSON — onde estamos**
+
+O Mini e o Air estão **funcionando e sincronizados**.
+
+Ambos incluem:
+
+* modelos de IA específicos
+* permissões de comando
+* exclusões de extensões duplicadas
+* regras de terminal inteligente
+* binds para inline completions
+
+No novo chat, vamos:
+🔥 Criar a versão final unificada (manual oficial)
+🔥 Criar os blocos “copiar e colar” para cada perfil
+
+---
+
+# 📌 **8. O QUE O NOVO CHAT DEVE FAZER**
+
+### O novo chat será responsável por:
+
+1. continuar escrevendo capítulos longos
+2. criar versão final de cada `.md`
+3. gerar diagramas
+4. unificar conteúdo entre capítulos
+5. revisar a arquitetura de arquivos
+6. preparar a versão PDF final
+7. refinar o mkdocs.yml
+8. criar macros (“copie e cole”) de settings
+9. revisar fluxos de trabalho
+10. deixar tudo pronto para publicação 1.0
+
+Ele vai trabalhar como **um assistente técnico + editor de documentação**.
+
+---
+
+# 📌 **9. COMO RETOMAR QUALQUER COISA**
+
+Todas as próximas mensagens devem ser relacionadas ao manual ou ajustes do VSCode com IA.
+
+No novo chat, basta usar o prompt abaixo.
+
+---
+
