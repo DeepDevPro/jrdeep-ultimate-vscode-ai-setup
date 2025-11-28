@@ -1,0 +1,1690 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia definitivo do setup de VSCode + GPT + Claude + Codex criado para Junior Deep.">
+      
+      
+        <meta name="author" content="Junior Deep">
+      
+      
+        <link rel="canonical" href="https://deepdevpro.github.io/jrdeep-ultimate-vscode-ai-setup/08-disaster-recovery/">
+      
+      
+        <link rel="prev" href="../07-config-completa-airvsmini/">
+      
+      
+        <link rel="next" href="../09-profiles-reset/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Disaster Recovery - Manual JrDeep — VSCode + IA Ultimate (2025–2026)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#capitulo-8-procedimentos-de-recuperacao-disaster-recovery" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" class="md-header__button md-logo" aria-label="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manual JrDeep — VSCode + IA Ultimate (2025–2026)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Disaster Recovery
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" class="md-nav__button md-logo" aria-label="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manual JrDeep — VSCode + IA Ultimate (2025–2026)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    00 — Intro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    00 — Intro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-capa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-indice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-apresentacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apresentação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-filosofia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filosofia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 — Arquitetura & Perfis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 — Arquitetura & Perfis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-arquitetura-vscode-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura VSCode + IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-sistemas-air-mini-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Air / Mini / Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 — Configuração & Modelos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 — Configuração & Modelos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-config-setting-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuração settings.json
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-inline-chat-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inline, Chat e Agent Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-config-completa-airvsmini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config Completa Air vs Mini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 — Recovery & Migração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    08 — Recovery & Migração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disaster Recovery
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disaster Recovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#quando-tudo-quebrar-voce-nao-quebra-junto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Quando tudo quebrar — você não quebra junto.”
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-profiles-reset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reset de Perfis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-migrar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrar entre Máquinas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-recuperacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recuperação Total
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Comparações & Workflow
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    12 — Comparações & Workflow
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-gpt-vs-claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPT vs Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow JrDeep
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-tres-zonas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    As 3 Zonas do VSCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-sistema-definitivo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema Definitivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16 — Fluxos & Versões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    16 — Fluxos & Versões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-fluxo-decisao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fluxo de Decisão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-fluxo-visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fluxo Visual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-versao-vertical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versão Vertical (Mobile)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-versao-quadro-branco/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versão Quadro-Branco
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="capitulo-8-procedimentos-de-recuperacao-disaster-recovery">📘 <strong>CAPÍTULO 8 — PROCEDIMENTOS DE RECUPERAÇÃO (DISASTER RECOVERY)</strong></h1>
+<h3 id="quando-tudo-quebrar-voce-nao-quebra-junto"><em>“Quando tudo quebrar — você não quebra junto.”</em></h3>
+<p>Este é um dos capítulos mais importantes do manual.
+Aqui você aprende a <strong>salvar sua sanidade</strong> quando:</p>
+<ul>
+<li>VSCode começa a falhar</li>
+<li>Copilot para de responder</li>
+<li>Terminal para de executar comandos</li>
+<li>A IA ignora instruções</li>
+<li>O Agent trava</li>
+<li>Extensões somem</li>
+<li>Keybindings quebram</li>
+<li>O VSCode não abre</li>
+<li>O perfil bagunça tudo</li>
+<li>O macOS entra em conflito com extensões</li>
+<li>Configurações se misturam entre Air e Mini</li>
+</ul>
+<p>Você vai conseguir:</p>
+<ul>
+<li>Recuperar tudo <strong>em 2 a 10 minutos</strong></li>
+<li>Sem reinstalar nada</li>
+<li>Sem perder arquivos</li>
+<li>Sem apagar projetos</li>
+</ul>
+<p>Vamos para a bíblia do <em>DR – Disaster Recovery</em>.</p>
+<hr />
+<h1 id="81-o-que-mais-quebra-o-vscode">🧨 <strong>8.1 — O QUE MAIS QUEBRA O VSCode</strong></h1>
+<p>O que causa 90% dos problemas:</p>
+<ol>
+<li><strong>Extensões que interferem no Terminal</strong></li>
+<li><strong>Plugins que tentam acessar o filesystem antes do Agent</strong></li>
+<li><strong>Settings.json poluído</strong></li>
+<li><strong>Perfis misturados</strong></li>
+<li><strong>múltiplas versões do VSCode rodando (Stable vs Insiders)</strong></li>
+<li><strong>GitLens com IA ativado</strong></li>
+<li><strong>Docker com recursos de inteligência</strong></li>
+<li><strong>Atualizações automáticas</strong></li>
+<li><strong>Copilot desatualizado</strong></li>
+<li><strong>Perfil renomeado indevidamente</strong></li>
+</ol>
+<p>Com esse capítulo, você resolve tudo isso rapidamente.</p>
+<hr />
+<h1 id="82-primeiro-socorros-30-segundos">🛡️ <strong>8.2 — PRIMEIRO SOCORROS (30 segundos)</strong></h1>
+<h3 id="se-der-pau-faca-isso-antes-de-qualquer-outra-coisa"><em>“Se der pau, faça isso ANTES de qualquer outra coisa.”</em></h3>
+<p><strong>Passo 1 — Reiniciar apenas o VSCode (Hard Refresh)</strong>
+Fecha tudo e pressione:</p>
+<pre><code>CMD + SHIFT + P
+&gt; Developer: Reload Window
+</code></pre>
+<p>👉 resolve 40% dos problemas.</p>
+<hr />
+<p><strong>Passo 2 — Reiniciar os serviços internos do VSCode</strong></p>
+<p>Command Palette:</p>
+<pre><code>&gt; Developer: Restart Extension Host
+</code></pre>
+<p>👉 resolve mais 25%.</p>
+<hr />
+<p><strong>Passo 3 — Limpar o contexto de IA</strong></p>
+<p>No Copilot Chat:</p>
+<pre><code>/reset
+</code></pre>
+<p>ou no VSCode:</p>
+<pre><code>CMD + SHIFT + P
+&gt; GitHub Copilot: Reset Chat Context
+</code></pre>
+<p>👉 resolve 10%.</p>
+<p>Total: <strong>75% dos problemas resolvidos sem nem suar.</strong></p>
+<hr />
+<h1 id="83-recuperar-o-terminal-quando-a-ia-nao-executa-comandos">🧯 <strong>8.3 — RECUPERAR O TERMINAL QUANDO A IA NÃO EXECUTA COMANDOS</strong></h1>
+<p>Se a IA responde coisas como:</p>
+<ul>
+<li>“Não tenho permissão para executar comandos”</li>
+<li>“Terminal execution está desabilitado”</li>
+<li>“Não encontrei nenhum terminal válido”</li>
+</ul>
+<p>Faça isto:</p>
+<h3 id="1-teste-o-recurso-manualmente">✔️ 1. Teste o recurso manualmente:</h3>
+<p>Command Palette:</p>
+<pre><code>&gt; Copilot: Enable/Disable Chat Terminal Execution
+</code></pre>
+<p>Se isso <strong>NÃO APARECER</strong>:</p>
+<p>👉 você está em um perfil sem permissões.</p>
+<p>Mude o perfil:</p>
+<pre><code>CMD + SHIFT + P
+&gt; Profiles: Switch Profile
+</code></pre>
+<p>Escolha:</p>
+<h3 id="juniordeep-air">🔥 JuniorDeep-Air</h3>
+<p>ou</p>
+<h3 id="juniordeep-mini">🔥 JuniorDeep-Mini</h3>
+<hr />
+<h3 id="2-se-o-comando-aparece-mas-nao-funciona">✔️ 2. Se o comando aparece mas não funciona:</h3>
+<p>Vá no seu <code>settings.json</code> e procure:</p>
+<pre><code>&quot;chat.tools.terminal&quot;
+</code></pre>
+<p>Delete tudo.</p>
+<hr />
+<h3 id="3-crie-um-terminal-limpo">✔️ 3. Crie um terminal limpo:</h3>
+<p>Command Palette:</p>
+<pre><code>&gt; Terminal: Create New Terminal
+</code></pre>
+<hr />
+<h3 id="4-reabra-o-vscode">✔️ 4. Reabra o VSCode:</h3>
+<pre><code>Developer: Reload Window
+</code></pre>
+<hr />
+<p>Ao final, peça:</p>
+<pre><code>Teste: crie um terminal e rode “echo OK”
+</code></pre>
+<hr />
+<h1 id="84-recuperar-quando-o-copilot-para-de-responder">🧹 <strong>8.4 — RECUPERAR QUANDO O Copilot PARA DE RESPONDER</strong></h1>
+<p>Se o Copilot:</p>
+<ul>
+<li>fica carregando infinitamente</li>
+<li>some</li>
+<li>trava</li>
+<li>dá resposta vazia</li>
+<li>não reconhece o modelo</li>
+<li>dá erro 400/500</li>
+<li>acusa “unsupported_api_for_model”</li>
+</ul>
+<p>Faça os passos:</p>
+<hr />
+<h3 id="1-checar-modelo-selecionado">✔️ 1. Checar modelo selecionado</h3>
+<p>Alguns modelos só funcionam em certos modos:</p>
+<ul>
+<li><strong>gpt-5.1-codex</strong> → apenas inline</li>
+<li><strong>gpt-5.1-preview</strong> → apenas chat/agent</li>
+<li><strong>codex-mini</strong> → inline</li>
+<li><strong>claude 3.5/4.5</strong> → chat/agent</li>
+<li><strong>Claude Haiku</strong> → inline/agent</li>
+</ul>
+<p>Troque o modelo na barra superior.</p>
+<hr />
+<h3 id="2-resetar-o-copilot-chat">✔️ 2. Resetar o Copilot Chat</h3>
+<p>Command Palette:</p>
+<pre><code>&gt; GitHub Copilot Chat: Reset Chat Context
+</code></pre>
+<hr />
+<h3 id="3-reinstalar-o-copilot-rapido-nao-perde-nada">✔️ 3. Reinstalar o Copilot (rápido, não perde nada)</h3>
+<pre><code>CMD + SHIFT + X
+Digite: GitHub Copilot
+Desinstalar → Reinstalar
+</code></pre>
+<p>Isso resolve 80% dos casos.</p>
+<hr />
+<h1 id="85-recuperar-quando-o-settingsjson-quebra-tudo">🗂️ <strong>8.5 — RECUPERAR QUANDO O SETTINGS.JSON QUEBRA TUDO</strong></h1>
+<h3 id="sintomas">Sintomas:</h3>
+<ul>
+<li>atalhos somem</li>
+<li>terminal não funciona</li>
+<li>inline não aparece</li>
+<li>modelos ficam cinza</li>
+<li>extensões travam</li>
+<li>VSCode trava ao abrir</li>
+</ul>
+<p>Solução definitiva:</p>
+<hr />
+<h2 id="reset-parcial-5-segundos">🔥 <strong>RESET PARCIAL (5 segundos)</strong></h2>
+<p>Command Palette:</p>
+<pre><code>&gt; Preferences: Open Settings (JSON)
+</code></pre>
+<p>Substitua TUDO por:</p>
+<pre><code>{}
+</code></pre>
+<p>Salve → <strong>Reload Window</strong>.</p>
+<p>Isso não apaga extensões nem perfis.</p>
+<p>👉 O VSCode volta ao modo padrão limpo.</p>
+<p>Depois, basta reinstalar o <strong>perfil</strong>:</p>
+<pre><code>CMD + SHIFT + P
+&gt; Profiles: Import Profile
+</code></pre>
+<p>Selecione:</p>
+<ul>
+<li>JuniorDeep-Air
+  ou</li>
+<li>JuniorDeep-Mini
+  ou</li>
+<li>JuniorDeep-Agent</li>
+</ul>
+<p>Você volta aonde estava em <strong>exatos 10 segundos</strong>.</p>
+<hr />
+<h2 id="reset-hard-30-segundos">🔥 <strong>RESET HARD (30 segundos)</strong></h2>
+<p>Se nem isso funcionar:</p>
+<p><strong>Apague APENAS estes diretórios:</strong></p>
+<pre><code>~/Library/Application Support/Code/User/
+~/Library/Application Support/Code/Cache/
+~/Library/Application Support/Code/CachedData/
+</code></pre>
+<p>⚠️ <strong>NÃO APAGAR o diretório <code>Extensions</code></strong>
+Senão você perde todas EXTENSÕES instaladas.</p>
+<p>Depois abra o VSCode → ele recria tudo automaticamente.</p>
+<hr />
+<h1 id="86-recuperar-quando-o-perfil-quebra">🔄 <strong>8.6 — RECUPERAR QUANDO O PERFIL QUEBRA</strong></h1>
+<h3 id="sintomas_1">Sintomas:</h3>
+<ul>
+<li>perfis somem</li>
+<li>switch profile não funciona</li>
+<li>settings misturam entre perfis</li>
+<li>extensões erradas aparecem no perfil errado</li>
+</ul>
+<p>Solução:</p>
+<hr />
+<h2 id="1-abrir-o-gerenciador-de-perfis">✔️ 1. Abrir o gerenciador de perfis</h2>
+<pre><code>CMD + SHIFT + P
+&gt; Profiles: Manage
+</code></pre>
+<hr />
+<h2 id="2-importar-novamente-o-perfil-correto">✔️ 2. Importar novamente o perfil correto:</h2>
+<pre><code>Profiles → Import Profile
+</code></pre>
+<p>Selecione:</p>
+<ul>
+<li>JuniorDeep-Air.profile</li>
+<li>JuniorDeep-Mini.profile</li>
+<li>JuniorDeep-Agent.profile</li>
+</ul>
+<hr />
+<h2 id="3-se-todos-os-perfis-sumirem">✔️ 3. Se todos os perfis sumirem:</h2>
+<p>Apague:</p>
+<pre><code>~/Library/Application Support/Code/User/profiles.json
+</code></pre>
+<p>O VSCode recria automaticamente.</p>
+<hr />
+<h1 id="87-recuperar-quando-o-vscode-nao-abre">🔧 <strong>8.7 — RECUPERAR QUANDO O VSCode NÃO ABRE</strong></h1>
+<p>Probabilidades:</p>
+<ul>
+<li>Workspace corrompido</li>
+<li>Arquivo “state” corrompido</li>
+<li>Extensão quebrada</li>
+</ul>
+<hr />
+<h2 id="1-tente-abrir-sem-extensoes">✔️ 1. Tente abrir sem extensões</h2>
+<p>Terminal:</p>
+<pre><code>code --disable-extensions
+</code></pre>
+<p>Se abrir → problema é EXTENSÃO.</p>
+<hr />
+<h2 id="2-limpe-o-estado-global">✔️ 2. Limpe o estado global</h2>
+<p>Apague:</p>
+<pre><code>~/Library/Application Support/Code/User/globalStorage
+</code></pre>
+<hr />
+<h2 id="3-apague-somente-o-workspace-corrompido">✔️ 3. Apague somente o workspace corrompido</h2>
+<pre><code>rm ~/Library/Application\ Support/Code/User/workspaceStorage/* -rf
+</code></pre>
+<hr />
+<h2 id="4-modo-nuclear-rarissimo">✔️ 4. Modo nuclear (raríssimo)</h2>
+<p>Reinstalar o VSCode (não apaga nada):</p>
+<pre><code>rm -rf /Applications/Visual\ Studio\ Code.app
+</code></pre>
+<p>Baixe novamente:</p>
+<p><a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a></p>
+<hr />
+<h1 id="88-recuperar-quando-a-ia-faz-coisas-erradas-alucinacoes">🗝️ <strong>8.8 — RECUPERAR QUANDO A IA FAZ COISAS ERRADAS (ALUCINAÇÕES)</strong></h1>
+<h2 id="checklist">Checklist:</h2>
+<p>✔ Usando modelo errado?
+✔ O contexto está poluído?
+✔ Abriu muitos projetos simultâneos?
+✔ Está há dias sem reiniciar?
+✔ Terminal está bloqueado?
+✔ Configurações do Agent conflitaram?</p>
+<p>Faça:</p>
+<pre><code>/reset
+Developer: Reload Window
+Copilot: Reset Chat Context
+Switch Profile
+</code></pre>
+<p>Resolve quase sempre.</p>
+<hr />
+<h1 id="89-diretrizes-universais-de-seguranca">🧬 <strong>8.9 — DIRETRIZES UNIVERSAIS DE SEGURANÇA</strong></h1>
+<h3 id="jamais-permita">❌ Jamais permita:</h3>
+<ul>
+<li>extensões com IA além do Copilot</li>
+<li>VSCode com auto-update ligado</li>
+<li>perfis misturados entre Air e Mini</li>
+<li>instalar Docker no Mini sem necessidade</li>
+<li>permitir que qualquer extensão gerencie o Terminal</li>
+</ul>
+<h3 id="sempre">✔ Sempre:</h3>
+<ul>
+<li>tenha 3 perfis prontos</li>
+<li>use modelos leves no Mini</li>
+<li>reinicie VSCode 1× por dia</li>
+<li>mantenha seu manual salvo no GitHub</li>
+<li>sincronize perfis do Air para o Mini (não o contrário)</li>
+<li>trate o Mini como servidor, não workstation</li>
+</ul>
+<hr />
+<h1 id="810-checklist-rapido-de-recuperacao-poster">🧩 <strong>8.10 — CHECKLIST RÁPIDO DE RECUPERAÇÃO (POSTER)</strong></h1>
+<pre><code>Se travou:
+1. Reload Window
+2. Restart Extension Host
+3. Reset Chat Context
+4. Trocar modelo
+5. Trocar perfil
+
+Se continuar:
+6. Limpar settings.json
+7. Importar perfil de volta
+8. Apagar cache
+9. Abrir com --disable-extensions
+10. Reinstalar VSCode
+</code></pre>
+<p>Tempo total: <strong>2 a 10 minutos</strong>.</p>
+<hr />
+<h1 id="fim-do-capitulo-8">🔚 <strong>Fim do Capítulo 8</strong></h1>
+<p>Se quiser, posso gerar:</p>
+<p>➡️ <strong>Checklist em PDF</strong>
+➡️ <strong>Poster A3</strong>
+➡️ <strong>Versão condensada para colar no GitHub</strong>
+➡️ <strong>Playbook de recuperação para usar no Lovable</strong></p>
+<hr />
+<hr />
+<p>← Capítulo anterior: <a href="../07-config-completa-airvsmini/">07 — Config Completa Air vs Mini</a>  </p>
+<p>Próximo capítulo → <a href="../09-profiles-reset/">09 — Reset de Perfis</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.tracking", "navigation.top", "search.suggest", "content.code.copy", "content.code.annotate", "toc.integrate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

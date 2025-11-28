@@ -16,3 +16,6 @@
 
 > “GPT pensa. Claude executa. Codex codifica.”  
 > — Mantra oficial do setup JrDeep
+
+---
+Próximo capítulo → [00 — Índice Geral](00-indice.md)

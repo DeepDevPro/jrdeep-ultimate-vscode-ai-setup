@@ -1,0 +1,1658 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia definitivo do setup de VSCode + GPT + Claude + Codex criado para Junior Deep.">
+      
+      
+        <meta name="author" content="Junior Deep">
+      
+      
+        <link rel="canonical" href="https://deepdevpro.github.io/jrdeep-ultimate-vscode-ai-setup/09-profiles-reset/">
+      
+      
+        <link rel="prev" href="../08-disaster-recovery/">
+      
+      
+        <link rel="next" href="../10-migrar/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Reset de Perfis - Manual JrDeep — VSCode + IA Ultimate (2025–2026)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#capitulo-9-reset-individual-de-perfis-do-vscode" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" class="md-header__button md-logo" aria-label="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manual JrDeep — VSCode + IA Ultimate (2025–2026)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Reset de Perfis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" class="md-nav__button md-logo" aria-label="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manual JrDeep — VSCode + IA Ultimate (2025–2026)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    00 — Intro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    00 — Intro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-capa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-indice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-apresentacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apresentação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-filosofia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filosofia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 — Arquitetura & Perfis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 — Arquitetura & Perfis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-arquitetura-vscode-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura VSCode + IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-sistemas-air-mini-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Air / Mini / Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 — Configuração & Modelos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 — Configuração & Modelos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-config-setting-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuração settings.json
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-inline-chat-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inline, Chat e Agent Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-config-completa-airvsmini/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config Completa Air vs Mini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 — Recovery & Migração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    08 — Recovery & Migração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-disaster-recovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disaster Recovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reset de Perfis
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reset de Perfis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#limpar-so-o-que-precisa-sem-quebrar-o-resto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Limpar só o que precisa — sem quebrar o resto.”
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-migrar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrar entre Máquinas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-recuperacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recuperação Total
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Comparações & Workflow
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    12 — Comparações & Workflow
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-gpt-vs-claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPT vs Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow JrDeep
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-tres-zonas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    As 3 Zonas do VSCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-sistema-definitivo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema Definitivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16 — Fluxos & Versões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    16 — Fluxos & Versões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-fluxo-decisao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fluxo de Decisão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-fluxo-visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fluxo Visual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-versao-vertical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versão Vertical (Mobile)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-versao-quadro-branco/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versão Quadro-Branco
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="capitulo-9-reset-individual-de-perfis-do-vscode">📘 <strong>CAPÍTULO 9 — RESET INDIVIDUAL DE PERFIS DO VSCode</strong></h1>
+<h3 id="limpar-so-o-que-precisa-sem-quebrar-o-resto"><em>“Limpar só o que precisa — sem quebrar o resto.”</em></h3>
+<p>Esse capítulo é ouro puro, porque o VSCode <strong>não foi projetado originalmente</strong> para perfis avançados como você usa (Air, Mini, Agent), e por isso muitas pessoas acabam misturando configurações, corrompendo perfis ou perdendo setup.</p>
+<p>Aqui você aprende a:</p>
+<ul>
+<li>Resetar <strong>apenas 1 perfil</strong></li>
+<li>Exportar e importar perfis</li>
+<li>Clonar perfis</li>
+<li>Reparar perfis quebrados</li>
+<li>Migrar perfis entre Mac Air → Mac Mini</li>
+<li>Revisar dependências de IA por perfil</li>
+<li>Restaurar perfis que sumiram</li>
+<li>Colocar perfis sob versionamento</li>
+</ul>
+<p>Isso faz parte do seu treinamento ninja avançado de ambiente de desenvolvimento.</p>
+<hr />
+<h1 id="91-entender-a-arquitetura-de-perfis">🧩 <strong>9.1 — ENTENDER A ARQUITETURA DE PERFIS</strong></h1>
+<p>Perfis no VSCode são compostos por:</p>
+<ol>
+<li><strong>settings.json</strong> específicos do perfil</li>
+<li><strong>extensions.json</strong> específicos</li>
+<li><strong>state.json</strong></li>
+<li><strong>storage.json</strong></li>
+<li><strong>keybindings.json</strong></li>
+<li><strong>Extensões ativadas/desativadas</strong></li>
+</ol>
+<p>Cada perfil é uma pasta dentro de:</p>
+<pre><code>~/Library/Application Support/Code/User/profiles/
+</code></pre>
+<p>Dentro de cada pasta existe algo como:</p>
+<pre><code>profile-155ae27a/
+    settings.json
+    keybindings.json
+    globalState.json
+    workspaceState.json
+    tasks.json
+    snippets/
+    extensions.json
+</code></pre>
+<p>👉 Cada perfil é totalmente isolado.</p>
+<hr />
+<h1 id="92-o-grande-erro-da-maioria">🔥 <strong>9.2 — O GRANDE ERRO DA MAIORIA</strong></h1>
+<p>As pessoas editam o settings.json <em>errado</em>.</p>
+<p>Você <strong>NUNCA</strong> deve editar:</p>
+<pre><code>~/Library/Application Support/Code/User/settings.json
+</code></pre>
+<p>Esse é o <strong>User global</strong> — e ele sobrescreve seus perfis.</p>
+<p>Você sempre deve editar via Command Palette:</p>
+<pre><code>&gt; Preferences: Open Settings (JSON)
+</code></pre>
+<p><em>Quando estiver dentro do perfil correto</em>.</p>
+<hr />
+<h1 id="93-como-resetar-apenas-um-perfil-metodo-seguro">✨ <strong>9.3 — COMO RESETAR APENAS UM PERFIL (MÉTODO SEGURO)</strong></h1>
+<p>Você não vai mexer com terminal.</p>
+<p>Apenas use o gerenciador de perfis do VSCode.</p>
+<hr />
+<h2 id="passo-1-abra-o-seletor-de-perfis"><strong>PASSO 1 — Abra o seletor de perfis</strong></h2>
+<pre><code>CMD + SHIFT + P
+&gt; Profiles: Manage
+</code></pre>
+<hr />
+<h2 id="passo-2-selecione-o-perfil-a-resetar"><strong>PASSO 2 — Selecione o perfil a resetar</strong></h2>
+<p>Exemplo:</p>
+<ul>
+<li><strong>JuniorDeep-Air</strong></li>
+<li><strong>JuniorDeep-Mini</strong></li>
+<li><strong>JuniorDeep-Agent</strong></li>
+</ul>
+<hr />
+<h2 id="passo-3-execute-o-reset-individual"><strong>PASSO 3 — Execute o reset individual</strong></h2>
+<p>Command Palette:</p>
+<pre><code>&gt; Profiles: Reset Profile
+</code></pre>
+<p>Esse comando:</p>
+<p>✔ limpa o settings.json daquele perfil
+✔ limpa keybindings
+✔ limpa todos os estados e storage
+✔ mantém suas extensões
+✔ não afeta nenhum outro perfil
+✔ recria tudo automaticamente</p>
+<p>⛔ <strong>Não apaga seus projetos.</strong>
+⛔ <strong>Não apaga suas extensões.</strong></p>
+<hr />
+<h1 id="94-reset-hard-de-um-perfil-avancado">🧨 <strong>9.4 — RESET HARD DE UM PERFIL (AVANÇADO)</strong></h1>
+<p>Se você quiser deletar absolutamente tudo de um perfil só:</p>
+<hr />
+<h2 id="passo-1-descobrir-o-id-do-perfil"><strong>PASSO 1 — Descobrir o ID do perfil</strong></h2>
+<pre><code>CMD + SHIFT + P
+&gt; Profiles: Export Profile
+</code></pre>
+<p>Exporte para ver o nome interno (ex: <code>155ae27a</code>).</p>
+<hr />
+<h2 id="passo-2-apagar-manualmente-o-perfil"><strong>PASSO 2 — Apagar manualmente o perfil</strong></h2>
+<pre><code>rm -rf ~/Library/Application\ Support/Code/User/profiles/155ae27a
+</code></pre>
+<p>(ou o ID correto)</p>
+<hr />
+<h2 id="passo-3-reimportar-o-perfil-limpo"><strong>PASSO 3 — Reimportar o perfil limpo</strong></h2>
+<pre><code>Profiles: Import Profile
+</code></pre>
+<p>Selecione:</p>
+<ul>
+<li><code>JuniorDeep-Air.json</code></li>
+<li><code>JuniorDeep-Mini.json</code></li>
+<li><code>JuniorDeep-Agent.json</code></li>
+</ul>
+<hr />
+<h1 id="95-como-clonar-um-perfil">🔧 <strong>9.5 — COMO CLONAR UM PERFIL</strong></h1>
+<p>Quer criar um perfil novo baseado no Air?
+Use:</p>
+<pre><code>CMD + SHIFT + P
+&gt; Profiles: Export Profile
+</code></pre>
+<p>Isso cria um <code>.profile.json</code> com:</p>
+<ul>
+<li>extensões</li>
+<li>settings</li>
+<li>keybindings</li>
+<li>aparência</li>
+<li>agent configs</li>
+</ul>
+<p>Depois:</p>
+<pre><code>&gt; Profiles: Import Profile
+</code></pre>
+<p>Digite um nome, por exemplo:</p>
+<ul>
+<li>“JuniorDeep-Server”</li>
+<li>“JuniorDeep-MacMini-Legacy”</li>
+<li>“JuniorDeep-Automaster-VM”</li>
+<li>“JuniorDeep-NodeCluster”</li>
+</ul>
+<hr />
+<h1 id="96-como-migrar-perfis-entre-maquinas-air-mini">🌀 <strong>9.6 — COMO MIGRAR PERFIS ENTRE MÁQUINAS (AIR → MINI)</strong></h1>
+<p>Melhor processo:</p>
+<hr />
+<h2 id="passo-1-exportar-o-perfil-no-mac-air">✔️ <strong>PASSO 1 — Exportar o perfil no Mac Air</strong></h2>
+<pre><code>CMD + SHIFT + P
+&gt; Profiles: Export Profile
+</code></pre>
+<p>Salve o arquivo em:</p>
+<pre><code>~/Desktop/Air-Profiles/
+</code></pre>
+<hr />
+<h2 id="passo-2-sincronizar-com-o-mini">✔️ <strong>PASSO 2 — Sincronizar com o Mini</strong></h2>
+<p>4 opções:</p>
+<ul>
+<li>Airdrop</li>
+<li>iCloud</li>
+<li>Dropbox</li>
+<li>GitHub (pasta privada)</li>
+</ul>
+<hr />
+<h2 id="passo-3-importar-no-mini">✔️ <strong>PASSO 3 — Importar no Mini</strong></h2>
+<p>No Mini:</p>
+<pre><code>Profiles: Import Profile
+</code></pre>
+<p>Selecione:</p>
+<ul>
+<li><code>JuniorDeep-Mini.profile.json</code>
+  ou</li>
+<li><code>JuniorDeep-Agent.profile.json</code></li>
+</ul>
+<p>👉 Instantâneo, funciona igual no Air.</p>
+<hr />
+<h1 id="97-como-evitar-corrupcao-de-perfis">⚠️ <strong>9.7 — COMO EVITAR CORRUPÇÃO DE PERFIS</strong></h1>
+<h3 id="nunca-misture">Nunca misture:</h3>
+<p>❌ Settings globais com settings de perfil
+❌ Usar Sync Settings com perfis ativos
+❌ Usar Code Insiders com perfis do stable
+❌ Copilot Agent ativado em perfis que não têm permissões
+❌ GitLens AI ativo
+❌ Docker com recursos de IA</p>
+<h3 id="sempre">Sempre:</h3>
+<p>✔ Salve perfis exportados
+✔ Use o manual de reset
+✔ Teste perfis após grandes alterações
+✔ Reinicie o VSCode 1× por dia
+✔ Mantenha perfis separados por máquina e objetivo</p>
+<hr />
+<h1 id="98-quando-criar-um-novo-perfil">🎭 <strong>9.8 — QUANDO CRIAR UM NOVO PERFIL?</strong></h1>
+<p>Crie um perfil novo quando você muda de contexto:</p>
+<h3 id="exemplos">exemplos:</h3>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Air</strong></td>
+<td>programar pesado, arquitetura, projetos grandes</td>
+</tr>
+<tr>
+<td><strong>Mini</strong></td>
+<td>manutenção, scripts leves, servidor caseiro</td>
+</tr>
+<tr>
+<td><strong>Agent</strong></td>
+<td>automação total com IA, comandos perigosos</td>
+</tr>
+</tbody>
+</table>
+<p>Outros perfis úteis:</p>
+<table>
+<thead>
+<tr>
+<th>Perfil</th>
+<th>Motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>JuniorDeep-Node</strong></td>
+<td>projetos Node/Next</td>
+</tr>
+<tr>
+<td><strong>JuniorDeep-Flutter</strong></td>
+<td>isolar Android SDK</td>
+</tr>
+<tr>
+<td><strong>JuniorDeep-Audio</strong></td>
+<td>C++ / VST / libs de áudio</td>
+</tr>
+<tr>
+<td><strong>JuniorDeep-TestLab</strong></td>
+<td>sandbox para testar extensões</td>
+</tr>
+<tr>
+<td><strong>JuniorDeep-Streaming</strong></td>
+<td>automações do Radio Importante</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="99-teste-rapido-o-perfil-esta-funcionando">🔍 <strong>9.9 — TESTE RÁPIDO: O PERFIL ESTÁ FUNCIONANDO?</strong></h1>
+<p>Pergunte ao Copilot Chat:</p>
+<pre><code>Qual é o modelo que você está usando agora?
+</code></pre>
+<p>Ele deve responder com exatidão:</p>
+<ul>
+<li>GPT-5.1 Preview</li>
+<li>Claude 4.5 Sonnet</li>
+<li>gpt-5.1-codex-mini</li>
+</ul>
+<p>Se ele der resposta confusa → perfil corrompido.</p>
+<p>Outro teste:</p>
+<pre><code>Crie um arquivo chamado perfil_teste.txt
+</code></pre>
+<p>Se ele não criar → o Agent está quebrado.</p>
+<hr />
+<h1 id="910-procedimento-completo-de-restauracao-de-um-perfil">🛡️ <strong>9.10 — PROCEDIMENTO COMPLETO DE RESTAURAÇÃO DE UM PERFIL</strong></h1>
+<p>Tempo total: <strong>1 minuto.</strong></p>
+<hr />
+<h3 id="passo-1-exportar-o-perfil-backup-antes-da-cirurgia"><strong>PASSO 1 — Exportar o perfil (backup antes da cirurgia)</strong></h3>
+<pre><code>Profiles: Export Profile
+</code></pre>
+<hr />
+<h3 id="passo-2-reset-profile"><strong>PASSO 2 — Reset Profile</strong></h3>
+<pre><code>Profiles: Reset Profile
+</code></pre>
+<hr />
+<h3 id="passo-3-importar-novamente-o-perfil-exportado"><strong>PASSO 3 — Importar novamente o perfil exportado</strong></h3>
+<pre><code>Profiles: Import Profile
+</code></pre>
+<hr />
+<h3 id="passo-4-forcar-reload"><strong>PASSO 4 — Forçar reload</strong></h3>
+<pre><code>Developer: Reload Window
+</code></pre>
+<p>→ Perfil restaurado.</p>
+<hr />
+<h1 id="fim-do-capitulo-9">🎉 <strong>Fim do Capítulo 9</strong></h1>
+<p>Se quiser, posso gerar:</p>
+<ul>
+<li>📝 <strong>Checklist A4</strong></li>
+<li>📄 <strong>Versão para imprimir</strong></li>
+<li>📁 <strong>Script automático para resetar perfis</strong></li>
+<li>🌐 <strong>Versão para usar no Lovable como agente de recuperação</strong></li>
+</ul>
+<hr />
+<hr />
+<p>← Capítulo anterior: <a href="../08-disaster-recovery/">08 — Disaster Recovery</a>  </p>
+<p>Próximo capítulo → <a href="../10-migrar/">10 — Migrar entre Máquinas</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.tracking", "navigation.top", "search.suggest", "content.code.copy", "content.code.annotate", "toc.integrate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1683 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia definitivo do setup de VSCode + GPT + Claude + Codex criado para Junior Deep.">
+      
+      
+        <meta name="author" content="Junior Deep">
+      
+      
+        <link rel="canonical" href="https://deepdevpro.github.io/jrdeep-ultimate-vscode-ai-setup/07-config-completa-airvsmini/">
+      
+      
+        <link rel="prev" href="../06-modelos/">
+      
+      
+        <link rel="next" href="../08-disaster-recovery/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Config Completa Air vs Mini - Manual JrDeep — VSCode + IA Ultimate (2025–2026)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#capitulo-7-configuracao-completa-macbook-air-vs-mac-mini" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" class="md-header__button md-logo" aria-label="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Manual JrDeep — VSCode + IA Ultimate (2025–2026)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Config Completa Air vs Mini
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="pink"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" class="md-nav__button md-logo" aria-label="Manual JrDeep — VSCode + IA Ultimate (2025–2026)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Manual JrDeep — VSCode + IA Ultimate (2025–2026)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    00 — Intro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    00 — Intro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-capa/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capa
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-indice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Índice Geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-apresentacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Apresentação
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-filosofia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Filosofia
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    02 — Arquitetura & Perfis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    02 — Arquitetura & Perfis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-arquitetura-vscode-ia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Arquitetura VSCode + IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-sistemas-air-mini-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistemas Air / Mini / Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    04 — Configuração & Modelos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    04 — Configuração & Modelos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-config-setting-json/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuração settings.json
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-inline-chat-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inline, Chat e Agent Mode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-modelos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config Completa Air vs Mini
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Config Completa Air vs Mini
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dois-ambientes-duas-maquinas-um-so-cerebro-o-seu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        “Dois ambientes. Duas máquinas. Um só cérebro: o seu.”
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    08 — Recovery & Migração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    08 — Recovery & Migração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-disaster-recovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Disaster Recovery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-profiles-reset/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reset de Perfis
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-migrar/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Migrar entre Máquinas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-recuperacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Recuperação Total
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    12 — Comparações & Workflow
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    12 — Comparações & Workflow
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-gpt-vs-claude/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GPT vs Claude
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-workflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Workflow JrDeep
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-tres-zonas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    As 3 Zonas do VSCode
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-sistema-definitivo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sistema Definitivo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    16 — Fluxos & Versões
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    16 — Fluxos & Versões
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-fluxo-decisao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fluxo de Decisão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-fluxo-visual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fluxo Visual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-versao-vertical/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versão Vertical (Mobile)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-versao-quadro-branco/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Versão Quadro-Branco
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="capitulo-7-configuracao-completa-macbook-air-vs-mac-mini">📘 <strong>CAPÍTULO 7 — CONFIGURAÇÃO COMPLETA: MACBOOK AIR vs MAC MINI</strong></h1>
+<h3 id="dois-ambientes-duas-maquinas-um-so-cerebro-o-seu"><em>“Dois ambientes. Duas máquinas. Um só cérebro: o seu.”</em></h3>
+<p>Este capítulo explica <strong>como cada máquina deve ser configurada</strong>, por quê, e quais otimizações deixam tudo rodando liso — com diagramas, fluxos e boas práticas.</p>
+<p>Você vai entender:</p>
+<ul>
+<li>por que seus dois Macs <strong>NÃO</strong> devem usar as mesmas configurações</li>
+<li>como deixar o Air extremamente poderoso e rápido</li>
+<li>como transformar o Mini 2014 num <strong>servidor de IA inteligente</strong></li>
+<li>como manter tudo sincronizado</li>
+<li>limites de hardware e como driblar</li>
+<li>como usar os dois juntos como um verdadeiro <strong>cluster pessoal</strong></li>
+</ul>
+<p>Vamos abrir o cofre.</p>
+<hr />
+<h1 id="71-visao-geral-dos-dois-ambientes">🧭 <strong>7.1 — VISÃO GERAL DOS DOIS AMBIENTES</strong></h1>
+<h2 id="macbook-air-sequoia">🖥️ <strong>MacBook Air (Sequoia)</strong></h2>
+<p>Seu <strong>computador principal</strong>, para:</p>
+<ul>
+<li>Criar sistemas</li>
+<li>Planejar projetos</li>
+<li>Escrever código real</li>
+<li>Rodar IAs grandes</li>
+<li>Executar microtarefas</li>
+<li>Testar localmente</li>
+<li>Usar Docker ocasionalmente</li>
+<li>Edição, automação, testes, tudo</li>
+</ul>
+<p>No Air você usa:</p>
+<ul>
+<li><strong>GPT-5.1</strong> para pensar e planejar</li>
+<li><strong>Claude 4.5</strong> para executar</li>
+<li><strong>Codex</strong> para escrever</li>
+<li><strong>Modelos premium</strong> SEM medo</li>
+<li><strong>Perfis completos</strong></li>
+</ul>
+<p>O Air é <strong>o cérebro</strong>.</p>
+<hr />
+<h2 id="mac-mini-2014-monterey-via-oclp">🧱 <strong>Mac Mini 2014 (Monterey via OCLP)</strong></h2>
+<p>Seu <strong>servidor pessoal de automação</strong>, para:</p>
+<ul>
+<li>Rodar jobs 24h</li>
+<li>Processamento de áudio</li>
+<li>Scripts Python</li>
+<li>Bot de automação</li>
+<li>Daemons</li>
+<li>Pipelines contínuos</li>
+<li>Escrita e manipulação de arquivos</li>
+<li>Manutenção remota</li>
+<li>Execução de Agentes com IA leve</li>
+</ul>
+<p>No Mini você usa:</p>
+<ul>
+<li><strong>Modelos mini</strong> por padrão</li>
+<li><strong>Modelos grandes quando necessário</strong></li>
+<li>Configuração leve</li>
+<li>Terminal sempre disponível</li>
+<li>Perfis minimalistas</li>
+<li>Zero extensões pesadas</li>
+<li>Zero frescura</li>
+<li>Zero UI desnecessária</li>
+</ul>
+<p>O Mini é <strong>sua linha de produção</strong>.</p>
+<hr />
+<h1 id="72-a-filosofia-jrdeep-dos-dois-ambientes">🔥 <strong>7.2 — A FILOSOFIA JRDEEP DOS DOIS AMBIENTES</strong></h1>
+<h3 id="air-criacao">Air = <strong>Criação</strong></h3>
+<h3 id="mini-execucao">Mini = <strong>Execução</strong></h3>
+<h3 id="air-inteligencia">Air = <strong>Inteligência</strong></h3>
+<h3 id="mini-forca-bruta-continua">Mini = <strong>Força bruta contínua</strong></h3>
+<h3 id="air-think-architect-build">Air = <strong>Think + Architect + Build</strong></h3>
+<h3 id="mini-run-monitor-serve">Mini = <strong>Run + Monitor + Serve</strong></h3>
+<p>Essa divisão aumenta sua velocidade de desenvolvimento <strong>em 2 a 3×</strong>.</p>
+<hr />
+<h1 id="73-configuracao-detalhada-do-macbook-air-sequoia">⚙️ <strong>7.3 — CONFIGURAÇÃO DETALHADA DO MACBOOK AIR (SEQUOIA)</strong></h1>
+<p><em>(JuniorDeep-Air Profile)</em></p>
+<h3 id="perfis">✔️ <strong>Perfis:</strong></h3>
+<ul>
+<li><strong>JuniorDeep-Air</strong> (principal)</li>
+<li>Extensions completas</li>
+<li>UI otimizada</li>
+<li>Terminal execution full</li>
+<li>Agent full</li>
+<li>Modelos premium</li>
+<li>Inline Codex forte</li>
+<li>GPT-5.1 como Chat principal</li>
+<li>Claude 4.5 para execução/agent</li>
+<li>Atualizações do VSCode <strong>manuais</strong></li>
+<li>Extensões pesadas permitidas (Docker, Python, GitLens — MAS SEM IA)</li>
+</ul>
+<hr />
+<h2 id="731-machine-power">⚙️ <strong>7.3.1 — Machine Power</strong></h2>
+<p>O MacBook Air:</p>
+<ul>
+<li>roda IAs grandes sem travar</li>
+<li>gera logs rápido</li>
+<li>navega entre projetos gigantes</li>
+<li>gerencia Docker sem sofrer</li>
+<li>suporta extensões pesadas</li>
+<li>não limita VSCode com RAM baixa</li>
+</ul>
+<hr />
+<h2 id="732-modelos-ideais-no-air">🧠 <strong>7.3.2 — Modelos ideais no Air</strong></h2>
+<h3 id="chat-default-gpt-51"><strong>Chat default: GPT-5.1</strong></h3>
+<p>para blueprint e estratégia.</p>
+<h3 id="agent-default-claude-45-sonnet"><strong>Agent default: Claude 4.5 Sonnet</strong></h3>
+<p>para executar tudo com precisão.</p>
+<h3 id="inline-default-gpt-51-codex"><strong>Inline default: GPT-5.1 Codex</strong></h3>
+<p>para escrever código como água.</p>
+<h3 id="opcoes-premium-acessiveis"><strong>Opções premium acessíveis:</strong></h3>
+<ul>
+<li>Gemini 3 Pro (para multimodal)</li>
+<li>GPT-5.1 Codex Mini (para economia)</li>
+<li>Sonnet 4.5 HA (quando disponível)</li>
+</ul>
+<hr />
+<h2 id="733-atalhos-ideais-air">🧩 <strong>7.3.3 — Atalhos ideais (Air)</strong></h2>
+<ul>
+<li><strong>TAB</strong> → aceitar inline</li>
+<li><strong>CTRL + Enter</strong> → completar com Copilot</li>
+<li><strong>CTRL + Shift + I</strong> → abrir Agent refinado</li>
+<li><strong>CMD + K CMD + S</strong> → gerenciar keybindings</li>
+<li><strong>CMD + Shift + P</strong> → alternar perfis rapidamente</li>
+</ul>
+<hr />
+<h2 id="734-extensoes-air">💾 <strong>7.3.4 — Extensões (Air)</strong></h2>
+<h3 id="ativas-com-ia">Ativas com IA:</h3>
+<ul>
+<li>Copilot</li>
+<li>Copilot Chat</li>
+<li>VSCode Chat</li>
+<li>GitHub Agents</li>
+</ul>
+<h3 id="ativas-sem-ia">Ativas sem IA:</h3>
+<ul>
+<li>Docker</li>
+<li>Python</li>
+<li>GitLens</li>
+<li>ESLint</li>
+<li>Prettier</li>
+<li>Markdownlint</li>
+</ul>
+<h3 id="bloqueadas-com-ia">Bloqueadas com IA:</h3>
+<ul>
+<li>Tudo que não deve consumir créditos.</li>
+</ul>
+<hr />
+<h1 id="74-configuracao-detalhada-do-mac-mini-monterey">🧱 <strong>7.4 — CONFIGURAÇÃO DETALHADA DO MAC MINI (MONTEREY)</strong></h1>
+<p><em>(JuniorDeep-Mini Profile)</em></p>
+<p>O objetivo é manter:</p>
+<ul>
+<li><strong>leveza</strong></li>
+<li><strong>velocidade</strong></li>
+<li><strong>estabilidade</strong></li>
+<li><strong>execução 24/7</strong></li>
+<li><strong>zero travamentos</strong></li>
+<li><strong>baixo consumo de RAM</strong></li>
+</ul>
+<hr />
+<h2 id="741-perfis-no-mini">⚙️ <strong>7.4.1 — Perfis no Mini</strong></h2>
+<h3 id="ativo-juniordeep-mini">Ativo: <strong>JuniorDeep-Mini</strong></h3>
+<h3 id="ajustes-principais">Ajustes principais:</h3>
+<p>✔️ Inline Codex Mini
+✔️ Chat com GPT-5-Mini por padrão
+✔️ Agent permitido, mas com IA leve
+✔️ Extensões mínimas
+✔️ VSCode super leve
+✔️ Nada de UI pesada
+✔️ Nada de extensões que interceptam terminal
+✔️ Nada de Docker (a não ser que precise)</p>
+<hr />
+<h2 id="742-modelos-no-mini">🧠 <strong>7.4.2 — Modelos no Mini</strong></h2>
+<p>Padrões:</p>
+<ul>
+<li><strong>GPT-5 Mini</strong></li>
+<li><strong>GPT-4o Mini</strong></li>
+<li><strong>Claude Haiku</strong></li>
+<li><strong>GPT-5.1 Codex Mini</strong></li>
+</ul>
+<p>Mas quando você quiser usar o Mini para projetos reais:</p>
+<p>👉 basta mudar manualmente para GPT-5.1 ou Claude 4.5.</p>
+<h3 id="sim-o-mini-pode-usar-ia-forte-mas-manualmente">Sim, o Mini pode usar IA forte — <em>mas manualmente</em>.</h3>
+<p>Isso evita lentidão desnecessária.</p>
+<hr />
+<h2 id="743-extensoes-mini">🧩 <strong>7.4.3 — Extensões (Mini)</strong></h2>
+<h3 id="ativas">Ativas:</h3>
+<ul>
+<li>Copilot</li>
+<li>Copilot Chat</li>
+<li>Python (somente se for rodar scripts)</li>
+<li>Git</li>
+<li>Remote Development</li>
+</ul>
+<h3 id="desativadas">Desativadas:</h3>
+<ul>
+<li>Docker</li>
+<li>GitLens com IA</li>
+<li>Prettier com IA</li>
+<li>Tudo que exige RAM sobrando</li>
+</ul>
+<h3 id="regras">Regras:</h3>
+<ul>
+<li>Nenhuma extensão usa IA exceto Copilot</li>
+<li>Terminal sempre disponível</li>
+<li>Perfil minimalista</li>
+<li>UI básica</li>
+<li>Nenhum pacote pesado</li>
+</ul>
+<hr />
+<h1 id="75-o-papel-do-perfil-jrdeep-agent">⚡ <strong>7.5 — O PAPEL DO PERFIL “JRDEEP-AGENT”</strong></h1>
+<p><em>(é o “modo deus”, mas seguro)</em></p>
+<p>Esse perfil é seu:</p>
+<p>🟣 <strong>Modo Automação Absoluta</strong>
+🟣 <strong>Modo Executor Universal</strong>
+🟣 <strong>Modo Tarefas Pesadas</strong>
+🟣 <strong>Modo Instalação de ambientes</strong>
+🟣 <strong>Modo scripts destrutivos</strong>
+🟣 <strong>Modo reestruturação de projetos</strong></p>
+<p>Esse perfil tem:</p>
+<ul>
+<li>As regras de IA mais fortes</li>
+<li>Qualquer modelo permitido</li>
+<li>Terminal full</li>
+<li>FS full</li>
+<li>Zero extensões atrapalhando</li>
+<li>Zero overhead</li>
+<li>Velocidade máxima</li>
+</ul>
+<p>Use este perfil quando quiser que a IA:</p>
+<ul>
+<li>crie projetos enormes</li>
+<li>reestruture pastas inteiras</li>
+<li>implemente sistemas do zero</li>
+<li>execute pipelines complexos</li>
+<li>gerencie automações no Mini</li>
+</ul>
+<hr />
+<h1 id="76-cross-power-usando-air-mini-como-um-cluster-pessoal">🧬 <strong>7.6 — “CROSS-POWER”: USANDO AIR + MINI COMO UM CLUSTER PESSOAL</strong></h1>
+<p>Aqui está o segredo que muda tudo:</p>
+<h3 id="o-air-pensa">O Air pensa.</h3>
+<h3 id="o-mini-executa">O Mini executa.</h3>
+<p>Você pode fazer:</p>
+<pre><code>No Air: GPT-5.1 planeja o pipeline
+No Mini: Claude Sonnet executa o pipeline via Agent
+</code></pre>
+<p>Ou:</p>
+<pre><code>No Air: GPT planeja um script
+No Mini: Agent executa o script continuamente
+</code></pre>
+<p>Ou:</p>
+<pre><code>No Air: arquitetar app Flask/Next
+No Mini: rodar o app 24/7 enquanto vc dorme
+</code></pre>
+<p>Isso transforma seus dois Macs em um <strong>cluster profissional de desenvolvimento + automação</strong>.</p>
+<hr />
+<h1 id="77-otimizacoes-especificas-para-o-mini-2014">🔧 <strong>7.7 — OTIMIZAÇÕES ESPECÍFICAS PARA O MINI 2014</strong></h1>
+<p>O Mini tem limitações:</p>
+<ul>
+<li>CPU Dual-Core</li>
+<li>RAM DDR3</li>
+<li>GPU integrada fraca</li>
+<li>SSD depende do que você instalou</li>
+<li>Monterey via OCLP (não nativo)</li>
+</ul>
+<p>Então você deve:</p>
+<h3 id="usar-vscode-com-ui-leve">✔️ Usar VSCode com UI leve</h3>
+<p>(retirar animações, retirar lista lateral, desativar minimap)</p>
+<h3 id="usar-tema-escuro-sem-transparencia">✔️ Usar tema escuro sem transparência</h3>
+<p>(Monokai, Dracula, Carbon, GitHub Dark)</p>
+<h3 id="evitar-extensoes-que-monitoram-fs">✔️ Evitar extensões que monitoram FS</h3>
+<p>(podem travar a máquina)</p>
+<h3 id="nao-usar-docker-no-mini-regularmente">✔️ Não usar Docker no Mini regularmente</h3>
+<p>(somente quando necessário)</p>
+<h3 id="manter-logs-rotacionados">✔️ Manter logs rotacionados</h3>
+<p>(o Mini sofre quando logs explodem)</p>
+<h3 id="evitar-multiplas-janelas-do-vscode">✔️ Evitar múltiplas janelas do VSCode</h3>
+<p>(abra 1 instância por vez)</p>
+<h3 id="usar-modelos-mini-quando-possivel">✔️ Usar modelos Mini quando possível</h3>
+<p>(mas permitir modelos grandes manualmente)</p>
+<hr />
+<h1 id="78-quando-usar-cada-maquina">🧭 <strong>7.8 — QUANDO USAR CADA MÁQUINA</strong></h1>
+<h3 id="use-o-air-para"><strong>Use o Air para:</strong></h3>
+<ul>
+<li>Planejar</li>
+<li>Codar</li>
+<li>Criar</li>
+<li>Testar</li>
+<li>Raciocinar</li>
+<li>Documentar</li>
+<li>Trabalhar com UI</li>
+<li>Criar automações</li>
+<li>Projetos críticos</li>
+</ul>
+<h3 id="use-o-mini-para"><strong>Use o Mini para:</strong></h3>
+<ul>
+<li>Rodar jobs 24/7</li>
+<li>Executar scripts</li>
+<li>Daemons</li>
+<li>Pipelines</li>
+<li>Testes contínuos</li>
+<li>Processos de áudio</li>
+<li>Bots</li>
+<li>Servidor local</li>
+</ul>
+<hr />
+<h1 id="fim-do-capitulo-7">🔚 <strong>Fim do Capítulo 7</strong></h1>
+<p>Seu setup Air + Mini agora é um ecossistema profissional.</p>
+<hr />
+<hr />
+<p>← Capítulo anterior: <a href="../06-modelos/">06 — Modelos de IA</a>  </p>
+<p>Próximo capítulo → <a href="../08-disaster-recovery/">08 — Disaster Recovery</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.tracking", "navigation.top", "search.suggest", "content.code.copy", "content.code.annotate", "toc.integrate"], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>

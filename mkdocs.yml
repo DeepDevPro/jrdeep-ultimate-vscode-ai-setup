@@ -1,6 +1,8 @@
 site_name: Manual JrDeep — VSCode + IA Ultimate (2025–2026)
+site_url: https://deepdevpro.github.io/jrdeep-ultimate-vscode-ai-setup/
 site_description: Guia definitivo do setup de VSCode + GPT + Claude + Codex criado para Junior Deep.
 site_author: Junior Deep
+
 
 theme:
   name: material
@@ -18,7 +20,6 @@ theme:
         icon: material/weather-sunny
         name: Light mode
   features:
-    - navigation.tabs
     - navigation.sections
     - navigation.tracking
     - navigation.top
@@ -29,20 +30,31 @@ theme:
 
 nav:
   - Home: index.md
-  - Capa: 00-capa.md
-  - Apresentação: 01-apresentacao.md
-  - Arquitetura dos Perfis: 02-arquitetura-perfis.md
-  - Modelos de IA: 03-modelos-ia.md
-  - Perfil Air (Sequoia): 04-perfil-air.md
-  - Perfil Mini (Monterey): 05-perfil-mini.md
-  - Workflow Inteligente: 06-workflow-inteligente.md
-  - Agent Mode: 07-agent-mode.md
-  - Inline Codex: 08-inline-codex.md
-  - Edit / Plan: 09-plan-edit.md
-  - Terminal Integrado: 10-integracao-terminal.md
-  - Recuperação Total: 11-recuperacao.md
-  - GPT vs Claude: 12-gpt-vs-claude.md
-  - Workflow JrDeep: 13-workflow-jrdeep.md
-  - As 3 Zonas do VSCode: 14-tres-zonas.md
-  - Checklist de Modelos: 15-checklist.md
-  - Fluxo Visual: 16-fluxo-visual.md
+  - 00 — Intro:
+    - Capa: 00-capa.md
+    - Índice Geral: 00-indice.md
+    - Apresentação: 01-apresentacao.md
+    - Filosofia: 01-filosofia.md
+  - 02 — Arquitetura & Perfis:
+    - Arquitetura VSCode + IA: 02-arquitetura-vscode-ia.md
+    - Sistemas Air / Mini / Agent: 03-sistemas-air-mini-agent.md
+  - 04 — Configuração & Modelos:
+    - Configuração settings.json: 04-config-setting-json.md
+    - Inline, Chat e Agent Mode: 05-inline-chat-agent.md
+    - Modelos de IA: 06-modelos.md
+    - Config Completa Air vs Mini: 07-config-completa-airvsmini.md
+  - 08 — Recovery & Migração:
+    - Disaster Recovery: 08-disaster-recovery.md
+    - Reset de Perfis: 09-profiles-reset.md
+    - Migrar entre Máquinas: 10-migrar.md
+    - Recuperação Total: 11-recuperacao.md
+  - 12 — Comparações & Workflow:
+    - GPT vs Claude: 12-gpt-vs-claude.md
+    - Workflow JrDeep: 13-workflow.md
+    - As 3 Zonas do VSCode: 14-tres-zonas.md
+    - Sistema Definitivo: 15-sistema-definitivo.md
+  - 16 — Fluxos & Versões:
+    - Fluxo de Decisão: 16-fluxo-decisao.md
+    - Fluxo Visual: 17-fluxo-visual.md
+    - Versão Vertical (Mobile): 18-versao-vertical.md
+    - Versão Quadro-Branco: 19-versao-quadro-branco.md
